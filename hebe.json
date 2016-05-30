@@ -1,0 +1,15 @@
+{
+   "project":"grav-plugin-urlparamfilter",
+   "platforms":{
+      "grav":{
+         "nodes":{
+            "plugin":[
+               {
+                  "source":"/",
+                  "destination":"/user/plugins/urlparamfilter"
+               }
+            ]
+         }
+      }
+   }
+}

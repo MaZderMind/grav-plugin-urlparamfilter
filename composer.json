@@ -1,0 +1,23 @@
+{
+    "name": "grav-plugin-urlparamfilter",
+    "description": "Filter for manipulating URL-Parameters in Templates.",
+    "keywords": ["urlparamfilter"],
+    "homepage": "https://github.com/MaZderMind/grav-plugin-urlparamfilter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MaZderMind",
+            "email": "peter@mazdermind.de",
+            "homepage": "https://github.com/MaZderMind/grav-plugin-urlparamfilter",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "peter@mazdermind.de",
+        "issues": "https://github.com/MaZderMind/grav-plugin-urlparamfilter/issues",
+        "docs": "https://github.com/MaZderMind/grav-plugin-urlparamfilter/blob/master/README.md"
+    },
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
