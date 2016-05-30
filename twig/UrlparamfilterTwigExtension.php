@@ -2,7 +2,6 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Grav;
-use Grav\Common\Uri;
 
 class UrlparamfilterTwigExtension extends \Twig_Extension
 {
