@@ -2,7 +2,7 @@
 
 ![URL-Parameter](urlparamfilter.png)
 
-`urlparamfilter` is a simple [Grav](http://github.com/getgrav/grav) plugin that adds filters for accessing and manipulating URL-Parameters, Query-Strings and URL-Fragemnts in Templates.
+`urlparamfilter` is a simple [Grav](http://github.com/getgrav/grav) plugin that adds filters for accessing and manipulating URL-Parameters, Query-Strings and URL-Fragments in Templates.
 
 # Installation
 
