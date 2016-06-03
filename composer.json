@@ -1,7 +1,7 @@
 {
     "name": "grav-plugin-urlparamfilter",
     "description": "Filter for manipulating URL-Parameters in Templates.",
-    "keywords": ["urlparamfilter"],
+    "keywords": ["url", "param", "query", "fragement", "twig", "template", "filter", "urlparamfilter"],
     "homepage": "https://github.com/MaZderMind/grav-plugin-urlparamfilter",
     "license": "MIT",
     "authors": [
