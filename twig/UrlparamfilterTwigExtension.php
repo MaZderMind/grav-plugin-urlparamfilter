@@ -190,7 +190,7 @@ class UrlparamfilterTwigExtension extends \Twig_Extension
             }
             else
             {
-                return null;
+                return '';
             }
         }
 
@@ -294,7 +294,7 @@ class UrlparamfilterTwigExtension extends \Twig_Extension
             }
             else
             {
-                return null;
+                return '';
             }
         }
 
