@@ -159,7 +159,13 @@ class UrlparamfilterTwigExtension extends \Twig_Extension
      * Appends the Specified Key and Value to the URL
      *
      * `{{ '/some/url?foo=bar' | query('moo', 'quu') | dump }}` => `'/some/url?foo=bar&moo=quu'`
-     *     
+     * `{{ '/some/url?foo=bar' | query('moo', '') | dump }}` => `'/some/url?foo=bar&moo='`
+     *
+     * ### query(str, false)
+     * Removes the Specified Key and Value from the URL
+     *
+     * `{{ '/some/url?foo=bar&moo=quu' | query('moo', 'false') | dump }}` => `'/some/url?foo=bar'`
+     *
      * ### query(dict)
      * Appends the Specified Key-Value-Pairs to the URL
      *
@@ -198,6 +204,16 @@ class UrlparamfilterTwigExtension extends \Twig_Extension
             else
             {
                 $pieces['query'][$a] = $b;
+            }
+            return $this->assembleUrl($pieces);
+        }
+
+        // remove key $a from $url
+        else if($b === false && is_string($a))
+        {
+            if(isset($pieces['query']))
+            {
+                unset($pieces['query'][$a]);
             }
             return $this->assembleUrl($pieces);
         }
@@ -247,6 +263,12 @@ class UrlparamfilterTwigExtension extends \Twig_Extension
      * Appends the Specified Key and Value to the URL
      *
      * `{{ '/some/url/foo:bar' | param('moo', 'quu') | dump }}` => `'/some/url/foo:bar/moo:quu'`
+     * `{{ '/some/url/foo:bar' | param('moo', '') | dump }}` => `'/some/url/foo:bar/moo:'`
+     *
+     * ### param(str, false)
+     * Removes the Specified Key and Value from the URL
+     *
+     * `{{ '/some/url/foo:bar' | param('moo', false) | dump }}` => `'/some/url/foo:bar'`
      *
      * ### param(dict)
      * Appends the Specified Key-Value-Pairs to the URL
@@ -286,6 +308,16 @@ class UrlparamfilterTwigExtension extends \Twig_Extension
             else
             {
                 $pieces['params'][$a] = $b;
+            }
+            return $this->assembleUrl($pieces);
+        }
+
+        // remove key $a from $url
+        else if($b === false && is_string($a))
+        {
+            if(isset($pieces['params']))
+            {
+                unset($pieces['params'][$a]);
             }
             return $this->assembleUrl($pieces);
         }

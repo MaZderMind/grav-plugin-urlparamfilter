@@ -45,7 +45,13 @@ Returns the Value of the Specified Query-Parameter
 Appends the Specified Key and Value to the URL
 
 `{{ '/some/url?foo=bar' | query('moo', 'quu') | dump }}` => `'/some/url?foo=bar&moo=quu'`
-    
+`{{ '/some/url?foo=bar' | query('moo', '') | dump }}` => `'/some/url?foo=bar&moo='`
+
+### query(str, false)
+Removes the Specified Key and Value from the URL
+
+`{{ '/some/url?foo=bar&moo=quu' | query('moo', 'false') | dump }}` => `'/some/url?foo=bar'`
+
 ### query(dict)
 Appends the Specified Key-Value-Pairs to the URL
 
@@ -68,7 +74,13 @@ Returns the Value of the Specified Query-Parameter
 Appends the Specified Key and Value to the URL
 
 `{{ '/some/url/foo:bar' | param('moo', 'quu') | dump }}` => `'/some/url/foo:bar/moo:quu'`
-    
+`{{ '/some/url/foo:bar' | param('moo', '') | dump }}` => `'/some/url/foo:bar/moo:'`
+
+### param(str, false)
+Removes the Specified Key and Value from the URL
+
+`{{ '/some/url/foo:bar' | param('moo', false) | dump }}` => `'/some/url/foo:bar'`
+
 ### param(dict)
 Appends the Specified Key-Value-Pairs to the URL
 
